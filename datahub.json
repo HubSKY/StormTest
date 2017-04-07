@@ -1,0 +1,37 @@
+{
+  "forward" : {
+    "host" : "storm-0",
+    "recv_port" : 9222,
+    "forward_port" : 9223
+  },
+  "data" : {
+    "bus" : {
+      "host" : "172.16.3.201",
+      "port" : 9999,
+      "command" : "siatxdata\r\nall\r\n"
+    },
+    "E6" : {
+      "host" : "172.16.3.201",
+      "port" : 5499,
+      "command" : "siatxdata\r\nall\r\n"
+    },
+    "taxi" : {
+      "host" : "172.16.3.201",
+      "port" : 5557,
+      "command" : "siatxdata\r\n"
+    },
+    "ProvRoad" : {
+      "host" : "172.16.3.201",
+      "port" : 19999,
+      "command" : "siatxdata\r\n"
+    },
+    "Zhuhai" : {
+      "host" : "172.16.3.201",
+      "port" : 29999,
+      "command" : "siatxdata\r\n"
+    }
+  },
+  "logger" : {
+    "path" : "/home/gongguiwei/log"
+  }
+}

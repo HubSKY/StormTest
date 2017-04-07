@@ -1,0 +1,58 @@
+{
+	"data" : {
+		"host" : "172.16.3.101",
+		"port" : 9223
+	},
+	"redis" : {
+		"host" : "172.16.3.143",
+		"port" : 6379,
+		"prefix" : ""
+	},
+	"postgresql" : {
+		"url" : "jdbc:postgresql://172.20.36.250:5432/gisinfo",
+		"user" : "postgres",
+		"passwd" : "pgxdata",
+		"db" : "gisinfo",
+		"table" : "guangdong_polyline"
+	},
+	"logger" : {
+		"project" : "traffic",
+		"type" : "file",
+		"path" : "D:\\ideaWorkSpace\\stormtests"
+	},
+	"shp" : {
+		"roads" : "/home/storm/shpfiles/guangdong2014shp_new/guangdong_polyline.shp"
+	},
+	"roads" : {
+		"exclude" : "989515,989519,989511"
+	},
+	"event" : {
+		"path" : "/home/storm/data/log"
+	},
+	"MapMatchingBolt" : {
+	  "log" : true,
+	  "debug" : false,
+	  "cacheVehicleLocation" : true
+	},
+	"RoadSpeedCalculator" : {
+          "log" : true,
+          "debug" : false
+        },
+	"SpeedComplement" : {
+		"roads_path" : "/home/storm/data/file/roads_param",
+		"duration" : 5,
+		"enabled" : true
+	},
+	"SpeedCalculator" : {
+	  "IsCalcPaths" : true,
+	  "CalcPathsHost" : "172.16.3.103",
+	  "CalcPathsPort" : 9999,
+	  "log" : true,
+	  "debug" : false,
+	  "RoadStat" : {
+	    "IsTx" : true,
+	    "host" : "172.16.4.100",
+	    "port" : 8123
+	  }
+	}
+}
